@@ -1,0 +1,29 @@
+@import '../../styles/variables.scss';
+
+.socialIconsContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  
+//   .socialMediaIconButton {
+//     .button {
+//       display: flex;
+//       align-items: center;
+//       gap: 10px;
+//       background-color: $light-color;
+//       border: none;
+//       cursor: pointer;
+//       transition: background-color 0.3s ease;
+  
+//       &:hover {
+//         background-color: rgba($primary-color, 0.8);
+//       }
+//     }
+  
+//     .title {
+//       font-size: 1rem;
+//     }
+//   }
+  
