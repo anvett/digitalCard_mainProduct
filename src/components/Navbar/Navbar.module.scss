@@ -23,14 +23,14 @@
     gap: $spacing-2;
   }
 
-  .navLink {
-    color: $primary-color;
-    font-size: 1rem;
-    cursor: pointer;
+  // .navLink {
+  //   color: $primary-color;
+  //   font-size: 1rem;
+  //   cursor: pointer;
 
-    &:hover {
-      color: $accent-color;
-      opacity: 0.8;
-    }
-  }
+  //   &:hover {
+  //     color: $accent-color;
+  //     opacity: 0.8;
+  //   }
+  // }
 }

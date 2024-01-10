@@ -4,9 +4,9 @@ import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import styles from './PersonalInfo.module.scss';
 
-const PersonalInfo = ({ name, title, description, nameClassName, titleClassName, descriptionClassName }) => {
+const PersonalInfo = ({ name, title, description, nameClassName, titleClassName, descriptionClassName, containerClassName }) => {
   return (
-    <Container className={styles.personalInfo}>
+    <Container className={`${styles.personalInfo} ${containerClassName} ` }>
       <Row>
         <Col>
           {name && <h1 className={`${styles.name} ${nameClassName}`}>{name}</h1>}

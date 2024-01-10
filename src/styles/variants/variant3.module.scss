@@ -1,8 +1,8 @@
 @import "../../styles/_variables.scss";
 
-$primary-color: #93c6db;
-$secondary-color: #d7dddf;
-$accent-color: #5174b7;
+$primary-color: #8b5fbf;
+$secondary-color: #e9e4ed;
+$accent-color: #55ccc9;
 $dark-color: #000000;
 $light-color: #ffffff;
 
@@ -11,22 +11,6 @@ $light-color: #ffffff;
 
 .navbarLogo {
   border-radius: 50%;
-}
-
-.nav {
-  color: $accent-color;
-}
-
-.navLink {
-  color: $accent-color;
-  font-size: 1rem;
-  cursor: pointer;
-
-  &:hover {
-    color: rgba($accent-color, 0.8);
-    opacity: 0.8;
-    text-decoration: none;
-  }
 }
 
 //Main container
@@ -43,11 +27,11 @@ $light-color: #ffffff;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  //border: solid 5px $primary-color;
+  border: solid 5px $light-color;
   background-image: url("/images/users/cecilia_cano/background_1.png");
   background-size: cover;
   background-repeat: no-repeat;
-  //background-color: $primary-color;
+  //background-color: $light-color;
   height: 100%;
 
   //Profile Image section
@@ -97,60 +81,52 @@ $light-color: #ffffff;
 
 //Contact Icons section
 //---------------------
-
 .contactIconsContainer {
   display: flex;
-  //flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   padding-top: $spacing-5;
-
-  @media (max-width: 400px) {
-    flex-direction: column;
-  }
 }
 
 .contactIconsCol {
   display: flex;
   justify-content: center;
   align-items: start;
-  //flex-direction: column;
-  gap: $spacing-3;
+  flex-direction: column;
+  gap: 5px;
   //padding-top: $spacing-4;
 }
 
 .contactButton {
   display: flex;
   align-items: center;
-  flex-direction: column;
-  gap: $spacing-2;
-  justify-content: center;
-  background-color: $accent-color;
+  //flex-direction: column;
+  gap: $spacing-5;
+  justify-content: start;
+  background-color: transparent;
   //border: solid 1px $dark-color;
   border-radius: 15%;
   padding-top: $spacing-5;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  height: 75px;
-  width: 75px;
+  height: 60px;
+  width: 200px;
 
   &:hover {
-    background-color: rgba($accent-color, 0.8);
-    color: red;
-    border-bottom: 2px solid $accent-color;
-    border-right: 2px solid $accent-color;
+    background-color: rgba($light-color, 0.8);
+
+    color: $primary-color;
+    border-bottom: 2px solid $dark-color;
+    border-right: 2px solid $dark-color;
     text-decoration: none;
   }
-  .contactButtonTitle {
-    color: $light-color;
-    font-size: 0.7rem;
-    margin-bottom: 0.5rem;
-    font-weight: bold;
-  }
-  .contactButtonIcon {
-    width: 40px;
-    height: 40px;
-  }
+}
+
+.contactButtonTitle {
+  color: $dark-color;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
 }
 
 //Social Media Icons section
@@ -162,27 +138,27 @@ $light-color: #ffffff;
   flex-direction: column;
   gap: $spacing-2;
   justify-content: center;
-  background-color: $accent-color;
+  background-color: $light-color;
   // //border: solid 1px $dark-color;
   border-radius: 15%;
   padding-top: $spacing-5;
   cursor: pointer;
   // transition: background-color 0.3s ease;
   height: 75px;
-  width: 75px;
+  width: 100px;
 
   &:hover {
-    background-color: rgba($accent-color, 0.8);
+    background-color: rgba($light-color, 0.7);
     color: $primary-color;
     text-decoration: none;
-    border-bottom: 2px solid $accent-color;
-    border-right: 2px solid $accent-color;
+    border-bottom: 2px solid $dark-color;
+    border-right: 2px solid $dark-color;
   }
 }
 
 .socialMediaTitle {
-  color: $light-color;
-  font-size: 0.7rem;
+  color: $dark-color;
+  font-size: 0.9rem;
   margin-bottom: 0.5rem;
   font-weight: bold;
 }
@@ -287,7 +263,7 @@ $light-color: #ffffff;
   padding: $spacing-1;
   width: 100%;
   height: auto;
-  background-color: $accent-color;
+  background-color: $primary-color;
 }
 
 .imageGalleryText {
@@ -384,7 +360,7 @@ $light-color: #ffffff;
 //-------------------------------------------
 
 .videoPlayer {
-  background-color: $accent-color;
+  background-color: $primary-color;
   width: 100%;
 }
 
@@ -400,40 +376,7 @@ $light-color: #ffffff;
   .scanText {
     margin-top: 5px;
     font-size: 1.2rem;
-    color: $dark-color;
+    color: $primary-color;
     text-align: center;
-  }
-}
-
-//Footer
-//-------------------------------------------
-
-.footer {
-  width: 100%;
-  height: auto;
-  .footerClassName {
-    background-color: $accent-color;
-    color: $light-color;
-    padding: $spacing-4;
-    .containerFooterClassName {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: center;
-      .textFooterClassName {
-        text-align: center;
-      }
-      .linkFooterClassName {
-        color: $light-color;
-        text-decoration: none;
-        transition: $transition-fast;
-        text-align: center;
-
-        &:hover {
-          text-decoration: underline;
-          color: $primary-color;
-        }
-      }
-    }
   }
 }

@@ -3,28 +3,26 @@ import { Container, Row, Col } from "react-bootstrap";
 import Image from "next/image";
 import ProfileImage from "@/components/ProfileImage/ProfileImage";
 import PersonalInfo from "@/components/PersonalInfo/PersonalInfo";
-import ContactIcons from "@/components/ContactIcons/ContactIcons";
-import SocialMediaIcons from "@/components/SocialMediaIcons/SocialMediaIcons";
 import Layout from "@/components/Layout/Layout";
 import { motion } from "framer-motion";
 import PaymentInfo from "@/components/PaymentInfo/PaymentInfo";
 import EducationAndCertifications from "@/components/EducationAndCertification/EducationAndCertification";
-import WorkExperience from "@/components/WorkExperience/WorkExperience";
 import ImageGallery from "@/components/ImageGallery/ImageGallery";
 import VideoPlayer from "@/components/VideoPlayer/VideoPlayer";
 import QRCodeComponent from "@/components/QrCodeComponent/QrCodeComponent";
-import styles from "../../styles/variants/variant1.module.scss";
-import Footer from "@/components/Footer/Footer";
 import CustomNavbar from "@/components/Navbar/Navbar";
+import ContactIconsButton from "@/components/ContactIconsButton/contactIconsButton";
+import SocialMediaIconsButton from "@/components/SocialMediaIconsButton/socialMediaIconsButton";
+import styles from "../../styles/variants/variant3.module.scss";
 
 export default function DiegoLarrea() {
   const items = [
     {
-      title: "Ingeniero Electromecánico",
-      institution: "Universidad Politécnica Salesiana",
-      year: "2018",
+      title: "Mgr. Ciencias de la Educación mención en Gestión Educativa",
+      institution: "Universidad Guayaquil",
+      year: "2021",
       description:
-        "Graduado en la Universidad Politécnica Salesiana, con el título de Ingeniero Electromecánico, con conocimientos en el área de automatización y control de procesos industriales, diseño, programación y puesta en marcha de sistemas de control, así como también en el diseño y desarrollo de proyectos de automatización industrial.",
+        "Graduado en la Universidad Ecotec con el título de Mgr. En Ciencias de la Educación",
       logo: "/images/education/politecnica_salesiana_logo.jpg",
     },
   ];
@@ -81,9 +79,7 @@ export default function DiegoLarrea() {
       <CustomNavbar
         logoSrc="/images/users/diego_larrea/logo.png"
         logoClassName={styles.navbarLogo}
-        navClassName={styles.nav}
-        navLinkClassName={styles.navLink}
-       />
+      />
       <Container fluid className={styles.mainContainer}>
         <Row className={styles.mainRow}>
           {/* Columna con imagen de perfil, informacón general, redes sociales e imagen informativa */}
@@ -95,7 +91,7 @@ export default function DiegoLarrea() {
                 transition={{ duration: 1 }}
               >
                 <ProfileImage
-                  src="/images/users/diego_larrea/profile.png"
+                  src="/images/users/cecilia_cano/profile.jpg"
                   alt="Ing. Diego Larrea"
                   size={250}
                   profileImageContainerClassName={styles.profileImageContainer}
@@ -104,27 +100,59 @@ export default function DiegoLarrea() {
             </section>
             <section>
               <PersonalInfo
-                name="Ing. Diego Larrea"
-                title="Ingeniero Electro Mecánico"
-                description="Ingeniero Electromecánico con más de 3 años de experiencia en el sector industrial, especializado en el área de automatización y control de procesos industriales. Conocimientos en diseño, programación y puesta en marcha de sistemas de control, diseño y desarrollo de proyectos, mantenimiento industrial"
+                name="MGRS. CECILIA CANO"
+                title="DIRECTORA UNIDAD EDUCATIVA"
+                //description="Licenciada en Ciencias de la Educación mención en Gestión Educativa"
+                containerClassName={styles.personalInfoContainer}
                 nameClassName={styles.personalInfoName}
                 titleClassName={styles.personalInfoTitle}
                 descriptionClassName={styles.personalInfoDescription}
               />
             </section>
+
+            <section>
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1 }}
+              >
+                <ContactIconsButton
+                  phone="+1234567890"
+                  phoneIcon="/icons/yellow_c/call_yc.png"
+                  phoneTitle="Llámame"
+                  email="correo@example.com"
+                  emailIcon="/icons/white/email_w.jpeg"
+                  emailTitle="Email"
+                  whatsapp="+1234567890"
+                  whatsappIcon="/icons/black/whatsapp_b.png"
+                  whatsappTitle="WhatsApp"
+                  // telegram="usernameTelegram"
+                  // telegramIcon="/icons/white/telegram-icon.png"
+                  // telegramTitle="Telegram"
+                  // location="MiUbicacion"
+                  // locationIcon="/icons/white/location-icon.png"
+                  // locationTitle="Ubicación"
+                  containerContactButton={styles.contactIconsContainer}
+                  colClassName={styles.contactIconsCol}
+                  buttonClassName={styles.contactButton}
+                  titleClassName={styles.contactButtonTitle}
+                />
+              </motion.div>
+            </section>
+
             <section className={styles.socialMediaSection}>
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1 }}
               >
-                <SocialMediaIcons
+                <SocialMediaIconsButton
                   facebook="https://www.facebook.com/carlosivan.veintimillatinoco.9"
-                  facebookIcon="/icons/white/facebook_w.png"
+                  facebookIcon="/icons/black/facebook_b.png"
                   twitter="https://www.twitter.com/usertwitter"
-                  twitterIcon="/icons/white/twitterx_w.png"
+                  twitterIcon="/icons/black/xtwitter_b.png"
                   instagram="https://www.instagram.com/userinstagram"
-                  instagramIcon="/icons/white/instagram_w.png"
+                  instagramIcon="/icons/black/instagram_b.png"
                   //linkedin="https://www.linkedin.com/userlinkedin"
                   //linkedinIcon="/icons/black/linkedin_b.png"
                   //  youtube="https://www.youtube.com/useryoutube"
@@ -139,23 +167,9 @@ export default function DiegoLarrea() {
                   //   tumblrIcon="/icons/black/tumblr_b.png"
                   //  tiktok="https://www.tiktok.com/usertiktok"
                   //  tiktokIcon="/icons/black/tiktok_b.png"
+                  buttonClassName={styles.socialMediaButton}
+                  titleClassName={styles.socialMediaTitle}
                 />
-                {/* Columna con información de contacto */}
-
-                <section>
-                  <ContactIcons
-                    phone="+593992870801"
-                    phoneIcon="/icons/black/call.png"
-                    email="razor_deg@hotmail.com"
-                    emailIcon="/icons/white/email_w.jpeg"
-                    whatsapp="+593992870801"
-                    whatsappIcon="/icons/white/whatsapp_w.png"
-                    // telegram="+593992870801"
-                    // telegramIcon="/icons/black/telegram.png"
-                    // location="Mi dirección"
-                    // locationIcon="/icons/black/location.png"
-                  />
-                </section>
               </motion.div>
             </section>
             <section className={styles.imageSection}>
@@ -178,7 +192,9 @@ export default function DiegoLarrea() {
             <section id="education">
               <div className={styles.educationText}>
                 <h2 className={styles.educationTitle}>Educación y Certificaciones</h2>
-                <span className={styles.educationInstructions} >Haz clic en el logo para ver la información</span>
+                <span className={styles.educationInstructions}>
+                  Haz clic en el logo para ver la información
+                </span>
               </div>
               <motion.div
                 initial={{ opacity: 0 }}
@@ -200,14 +216,15 @@ export default function DiegoLarrea() {
 
         {/* Componente de experiencia laboral */}
 
-
         <Row>
           <Col className={styles.imageGallery}>
             <div className={styles.imageGalleryText}>
               <h2 className={styles.imageGalleryTitle}>Experiencia laboral</h2>
-              <span className={styles.imageGalleryInstructions}>Haz clic en la imagen para ver la información</span>
+              <span className={styles.imageGalleryInstructions}>
+                Haz clic en la imagen para ver la información
+              </span>
             </div>
-            
+
             <ImageGallery
               images={images}
               imageDescriptionClassName={styles.imageDescription}
@@ -222,9 +239,11 @@ export default function DiegoLarrea() {
         <Row>
           <Col className={styles.paymentSection}>
             <section id="payment" className={styles.paymentInfo}>
-              <div className={styles.paymentText} >
+              <div className={styles.paymentText}>
                 <h2 className={styles.paymentTitle}>Información de Pago</h2>
-                <span className={styles.paymentInstructions}>Haz clic en el logo para acceder a los datos de la cuenta</span>
+                <span className={styles.paymentInstructions}>
+                  Haz clic en el logo para acceder a los datos de la cuenta
+                </span>
               </div>
               <motion.div
                 initial={{ opacity: 0 }}
@@ -257,22 +276,12 @@ export default function DiegoLarrea() {
         <Row>
           <Col className={styles.qrCode}>
             <section>
-              <QRCodeComponent 
-                qrCodeImageUrl="/images/users/diego_larrea/logo.png" altText="QR Code" />
+              <QRCodeComponent
+                qrCodeImageUrl="/images/users/diego_larrea/logo.png"
+                altText="QR Code"
+              />
             </section>
             <p className={styles.scanText}>Escanea tu código</p>
-          </Col>
-        </Row>
-
-        {/* Componente de footer */}
-        <Row >
-          <Col className={styles.footerCol}>
-            <Footer
-              footerClassName={styles.footerClassName}
-              containerFooterClassName={styles.containerFooterClassName}
-              textFooterClassName={styles.textFooterClassName}
-              linkFooterClassName={styles.linkFooterClassName}
-            />
           </Col>
         </Row>
       </Container>

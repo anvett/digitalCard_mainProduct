@@ -14,8 +14,9 @@ import CustomNavbar from "@/components/Navbar/Navbar";
 import ContactIconsButton from "@/components/ContactIconsButton/contactIconsButton";
 import styles from "../../styles/variants/variant2.module.scss";
 import SocialMediaIconsButton from "@/components/SocialMediaIconsButton/socialMediaIconsButton";
+import Footer from "@/components/Footer/Footer";
 
-export default function DiegoLarrea() {
+export default function Veriant2() {
   const items = [
     {
       title: "Mgr. Ciencias de la Educación mención en Gestión Educativa",
@@ -79,6 +80,8 @@ export default function DiegoLarrea() {
       <CustomNavbar
         logoSrc="/images/users/diego_larrea/logo.png"
         logoClassName={styles.navbarLogo}
+        navClassName={styles.nav}
+        navLinkClassName={styles.navLink}
       />
       <Container fluid className={styles.mainContainer}>
         <Row className={styles.mainRow}>
@@ -103,6 +106,7 @@ export default function DiegoLarrea() {
                 name="Mgrs. Cecilia Cano"
                 title="Directora de la Unidad de Educativa"
                 description="Licenciada en Ciencias de la Educación mención en Gestión Educativa"
+                containerClassName={styles.personalInfoContainer}
                 nameClassName={styles.personalInfoName}
                 titleClassName={styles.personalInfoTitle}
                 descriptionClassName={styles.personalInfoDescription}
@@ -116,11 +120,11 @@ export default function DiegoLarrea() {
               >
                 <SocialMediaIconsButton
                   facebook="https://www.facebook.com/carlosivan.veintimillatinoco.9"
-                  facebookIcon="/icons/black/facebook_b.png"
+                  facebookIcon="/icons/purple_l/facebook_l.png"
                   twitter="https://www.twitter.com/usertwitter"
-                  twitterIcon="/icons/black/xtwitter_b.png"
+                  twitterIcon="/icons/purple_l/xtwitter_l.png"
                   instagram="https://www.instagram.com/userinstagram"
-                  instagramIcon="/icons/black/instagram_b.png"
+                  instagramIcon="/icons/purple_l/instagram_l.png"
                   //linkedin="https://www.linkedin.com/userlinkedin"
                   //linkedinIcon="/icons/black/linkedin_b.png"
                   //  youtube="https://www.youtube.com/useryoutube"
@@ -135,29 +139,32 @@ export default function DiegoLarrea() {
                   //   tumblrIcon="/icons/black/tumblr_b.png"
                   //  tiktok="https://www.tiktok.com/usertiktok"
                   //  tiktokIcon="/icons/black/tiktok_b.png"
-                  buttonClassName={styles.socialMediaButton}  
-                  titleClassName= {styles.socialMediaTitle} 
+                  buttonClassName={styles.socialMediaButton}
+                  titleClassName={styles.socialMediaTitle}
                 />
 
                 <section>
                   <ContactIconsButton
                     phone="+1234567890"
-                    phoneIcon="/icons/yellow_c/call_yc.png"
+                    phoneIcon="/icons/purple_l/call_l.png"
                     phoneTitle="Llámame"
                     email="correo@example.com"
-                    emailIcon="/icons/white/email_w.jpeg"
+                    emailIcon="/icons/purple_l/email_l.png"
                     emailTitle="Email"
                     whatsapp="+1234567890"
-                    whatsappIcon="/icons/black/whatsapp_b.png"
+                    whatsappIcon="/icons/purple_l/whatsapp_l.png"
                     whatsappTitle="WhatsApp"
-                    // telegram="usernameTelegram"
-                    // telegramIcon="/icons/white/telegram-icon.png"
-                    // telegramTitle="Telegram"
+                    telegram="usernameTelegram"
+                    telegramIcon="/icons/purple_l/telegram_l.png"
+                    telegramTitle="Telegram"
                     // location="MiUbicacion"
                     // locationIcon="/icons/white/location-icon.png"
                     // locationTitle="Ubicación"
+                    containerContactButton={styles.contactIconsContainer}
+                    colClassName={styles.contactIconsCol}
                     buttonClassName={styles.contactButton}
                     titleClassName={styles.contactButtonTitle}
+                    iconClassName={styles.contactButtonIcon}
                   />
                 </section>
               </motion.div>
@@ -272,6 +279,18 @@ export default function DiegoLarrea() {
               />
             </section>
             <p className={styles.scanText}>Escanea tu código</p>
+          </Col>
+        </Row>
+
+        {/* Componente de footer */}
+        <Row>
+          <Col className={styles.footer}>
+            <Footer
+              footerClassName={styles.footerClassName}
+              containerFooterClassName={styles.containerFooterClassName}
+              textFooterClassName={styles.textFooterClassName}
+              linkFooterClassName={styles.linkFooterClassName}
+            />
           </Col>
         </Row>
       </Container>

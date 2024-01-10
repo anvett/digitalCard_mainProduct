@@ -21,19 +21,25 @@ const ContactIconsButton = ({
   locationTitle,
   buttonClassName,
   titleClassName,
+  iconClassName,
+  colClassName,
+  containerContactButton,
+
 }) => {
   return (
-    <Container fluid className={styles.contactIconsContainer}>
+    <Container fluid className={`${styles.contactIconsContainer} ${containerContactButton}` }>
       <Row className={styles.contactIconsRow}>
-        <Col className={styles.contactIconsCol}>
+        <Col className={ `${styles.contactIconsCol} ${colClassName}` }>
           {phone && (
             <ContactIconButton
               href={`tel:${phone}`}
               src={phoneIcon || "/icons/call_c.png"}
               alt="Phone"
               title={phoneTitle || "Phone"}
+              colClassName={colClassName}
               buttonClassName={buttonClassName}
               titleClassName={titleClassName}
+              iconClassName={iconClassName} 
               
             />
           )}

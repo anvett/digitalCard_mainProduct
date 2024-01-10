@@ -1,6 +1,23 @@
 @import "../../styles/_variables.scss";
 
+//Variables
+//-------------------------------------------
 
+$primary-color: #000000;
+$secondary-color: #d7dddf;
+$accent-color: #5174b7;
+$dark-color: #000000;
+$light-color: #ffffff;
+
+
+
+//Main container
+//-------------------------------------------
+
+.mainContainer {
+  min-height: 100vh;
+  width: 100%;
+}
 
 //Navbar
 //-------------------------------------------
@@ -9,13 +26,24 @@
   border-radius: 50%;
 }
 
-//Main container
-//-------------------------------------------
-
-.mainContainer {
-  min-height: calc(100vh - 190px);
-  width: 100%;
+.nav {
+  color: $primary-color;
 }
+
+.navLink {
+  color: $dark-color;
+  font-size: 1rem;
+  cursor: pointer;
+
+  &:hover {
+    color: rgba($dark-color, 0.8);
+    opacity: 0.8;
+    text-decoration: none;
+  }
+}
+
+//Main section
+//-------------------------------------------
 
 .infoCol {
   overflow: scroll;
@@ -309,5 +337,39 @@
     font-size: 1.2rem;
     color: $primary-color;
     text-align: center;
+  }
+}
+
+//Footer
+//-------------------------------------------
+
+.footerCol {
+  width: 100%;
+  height: auto;
+  .footerClassName {
+    background-color: $dark-color;
+    color: $light-color;
+    padding: $spacing-4;
+
+    .containerFooterClassName {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      .textFooterClassName {
+        text-align: center;
+      }
+      .linkFooterClassName {
+        color: $light-color;
+        text-decoration: none;
+        transition: $transition-fast;
+        text-align: center;
+
+        &:hover {
+          text-decoration: underline;
+          color: $primary-color;
+        }
+      }
+    }
   }
 }

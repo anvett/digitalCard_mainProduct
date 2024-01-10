@@ -8,7 +8,7 @@ export default function Layout({ children }) {
     <div className={styles.wrapper}>
       
       <main className={styles.layout}>{children} </main>
-      <Footer />
+      
     </div>
   );
 }
