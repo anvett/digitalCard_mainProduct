@@ -17,42 +17,52 @@ $light-color: #ffffff;
 //-------------------------------------------
 
 .mainContainer {
-  min-height: calc(100vh - 190px);
+  //min-height: calc(100vh - 190px);
+  min-height: 100vh;
   width: 100%;
 }
 
-.infoCol {
-  overflow: scroll;
+.profileImgCol {
+  //overflow: scroll;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  border: solid 5px $light-color;
-  background-image: url("/images/users/cecilia_cano/background_1.png");
+  //flex-direction: column;
+  //border: solid 5px $light-color;
+  background-image: url("/images/professions/architecture_1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   //background-color: $light-color;
   height: 100%;
+  padding-bottom: $spacing-4;
 
   //Profile Image section
   //--------------------------------------------------
 
-  .profileImageContainer {
+  .profileImage {
     // Imagen Circular
     //-------------------------------------------
-    background-color: $secondary-color;
+    //background-color: $secondary-color;
     border-radius: 50%;
     overflow: hidden;
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    // display: flex;
+    // justify-content: center;
+    // align-items: start;
     box-shadow: 0 25px 38px rgba(0, 0, 0, 0.1);
-    margin-top: 4rem;
+    margin-top: $spacing-7;
   }
 
   //Personal Information section
   //----------------------------
+
+  .personalInfoCol{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem;
+    gap: $spacing-2;}
 
   .personalInfoContainer {
     display: flex;
@@ -60,17 +70,18 @@ $light-color: #ffffff;
     align-items: center;
     flex-direction: column;
     padding: 1rem;
-    gap: $spacing-2;
+    gap: $spacing-1;
   }
 
   .personalInfoName {
-    color: $dark-color;
+    color: $primary-color;
     font-size: 2rem;
     margin-bottom: 0.5rem;
+    text-align: center;
   }
   .personalInfoTitle {
     color: $dark-color;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     margin-bottom: 0.5rem;
   }
   .personalInfoDescription {

@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Image from "next/image";
+import Head from "next/head";
 import ProfileImage from "@/components/ProfileImage/ProfileImage";
 import PersonalInfo from "@/components/PersonalInfo/PersonalInfo";
 import ContactIcons from "@/components/ContactIcons/ContactIcons";
@@ -77,205 +78,229 @@ export default function DiegoLarrea() {
   ];
 
   return (
-    <Layout>
-      <CustomNavbar
-        logoSrc="/images/users/diego_larrea/logo.png"
-        logoClassName={styles.navbarLogo}
-        navClassName={styles.nav}
-        navLinkClassName={styles.navLink}
-       />
-      <Container fluid className={styles.mainContainer}>
-        <Row className={styles.mainRow}>
-          {/* Columna con imagen de perfil, informacón general, redes sociales e imagen informativa */}
-          <Col xs={12} className={styles.infoCol}>
-            <section id="profile">
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 1 }}
-              >
-                <ProfileImage
-                  src="/images/users/diego_larrea/profile.png"
-                  alt="Ing. Diego Larrea"
-                  size={250}
-                  profileImageContainerClassName={styles.profileImageContainer}
+    <>
+      <Head>
+        <title>Andrés Veintimilla</title>
+        <meta name="description" content="Andrés Veintimilla Digital Card" />
+        <link rel="icon" href="/icons/sharedimage.ico" />
+
+        {/* Open Graph */}
+        <meta property="og:url" content="https://aveintimillacard.anvetcorp.com/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Business digital card Andrés Veintimilla" />
+        <meta property="og:description" content="Tarjeta de negocios digital" />
+        <meta
+          property="og:image"
+          content="https://aveintimillacard.anvetcorp.com/images/sharedimage.jpeg"
+        />
+      </Head>
+
+      <Layout>
+        <CustomNavbar
+          logoSrc="/images/users/diego_larrea/logo.png"
+          logoClassName={styles.navbarLogo}
+          navClassName={styles.nav}
+          navLinkClassName={styles.navLink}
+        />
+        <Container fluid className={styles.mainContainer}>
+          <Row className={styles.mainRow}>
+            <Col xs={12} className={styles.infoCol}>
+              <section id="profile">
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 1 }}
+                >
+                  <ProfileImage
+                    src="/images/users/diego_larrea/profile.png"
+                    alt="Ing. Diego Larrea"
+                    size={250}
+                    profileImageContainerClassName={styles.profileImageContainer}
+                  />
+                </motion.div>
+              </section>
+              <section>
+                <PersonalInfo
+                  name="Ing. Diego Larrea"
+                  title="Ingeniero Electro Mecánico"
+                  description="Ingeniero Electromecánico con más de 3 años de experiencia en el sector industrial, especializado en el área de automatización y control de procesos industriales. Conocimientos en diseño, programación y puesta en marcha de sistemas de control, diseño y desarrollo de proyectos, mantenimiento industrial"
+                  nameClassName={styles.personalInfoName}
+                  titleClassName={styles.personalInfoTitle}
+                  descriptionClassName={styles.personalInfoDescription}
                 />
-              </motion.div>
-            </section>
-            <section>
-              <PersonalInfo
-                name="Ing. Diego Larrea"
-                title="Ingeniero Electro Mecánico"
-                description="Ingeniero Electromecánico con más de 3 años de experiencia en el sector industrial, especializado en el área de automatización y control de procesos industriales. Conocimientos en diseño, programación y puesta en marcha de sistemas de control, diseño y desarrollo de proyectos, mantenimiento industrial"
-                nameClassName={styles.personalInfoName}
-                titleClassName={styles.personalInfoTitle}
-                descriptionClassName={styles.personalInfoDescription}
-              />
-            </section>
-            <section className={styles.socialMediaSection}>
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 1 }}
-              >
-                <SocialMediaIcons
-                  facebook="https://www.facebook.com/carlosivan.veintimillatinoco.9"
-                  facebookIcon="/icons/white/facebook_w.png"
-                  twitter="https://www.twitter.com/usertwitter"
-                  twitterIcon="/icons/white/twitterx_w.png"
-                  instagram="https://www.instagram.com/userinstagram"
-                  instagramIcon="/icons/white/instagram_w.png"
-                  //linkedin="https://www.linkedin.com/userlinkedin"
-                  //linkedinIcon="/icons/black/linkedin_b.png"
-                  //  youtube="https://www.youtube.com/useryoutube"
-                  //  youtubeIcon="/icons/black/youtube_b.png"
-                  //pinterest="https://www.pinterest.com/userpinterest"
-                  //pinterestIcon="/icons/black/pinterest_b.png"
-                  //   snapchat="https://www.snapchat.com/usersnapchat"
-                  //   snapchatIcon="/icons/black/snapchat_b.png"
-                  //   reddit="https://www.reddit.com/userreddit"
-                  //   redditIcon="/icons/black/reddit_b.png"
-                  //   tumblr="https://www.tumblr.com/usertumblr"
-                  //   tumblrIcon="/icons/black/tumblr_b.png"
-                  //  tiktok="https://www.tiktok.com/usertiktok"
-                  //  tiktokIcon="/icons/black/tiktok_b.png"
+              </section>
+              <section className={styles.socialMediaSection}>
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 1 }}
+                >
+                  <SocialMediaIcons
+                    facebook="https://www.facebook.com/carlosivan.veintimillatinoco.9"
+                    facebookIcon="/icons/white/facebook_w.png"
+                    twitter="https://www.twitter.com/usertwitter"
+                    twitterIcon="/icons/white/twitterx_w.png"
+                    instagram="https://www.instagram.com/userinstagram"
+                    instagramIcon="/icons/white/instagram_w.png"
+                    //linkedin="https://www.linkedin.com/userlinkedin"
+                    //linkedinIcon="/icons/black/linkedin_b.png"
+                    //  youtube="https://www.youtube.com/useryoutube"
+                    //  youtubeIcon="/icons/black/youtube_b.png"
+                    //pinterest="https://www.pinterest.com/userpinterest"
+                    //pinterestIcon="/icons/black/pinterest_b.png"
+                    //   snapchat="https://www.snapchat.com/usersnapchat"
+                    //   snapchatIcon="/icons/black/snapchat_b.png"
+                    //   reddit="https://www.reddit.com/userreddit"
+                    //   redditIcon="/icons/black/reddit_b.png"
+                    //   tumblr="https://www.tumblr.com/usertumblr"
+                    //   tumblrIcon="/icons/black/tumblr_b.png"
+                    //  tiktok="https://www.tiktok.com/usertiktok"
+                    //  tiktokIcon="/icons/black/tiktok_b.png"
+                  />
+                  {/* Columna con información de contacto */}
+
+                  <section>
+                    <ContactIcons
+                      phone="+593992870801"
+                      phoneIcon="/icons/black/call.png"
+                      email="razor_deg@hotmail.com"
+                      emailIcon="/icons/white/email_w.jpeg"
+                      whatsapp="+593992870801"
+                      whatsappIcon="/icons/white/whatsapp_w.png"
+                      // telegram="+593992870801"
+                      // telegramIcon="/icons/black/telegram.png"
+                      // location="Mi dirección"
+                      // locationIcon="/icons/black/location.png"
+                    />
+                  </section>
+                </motion.div>
+              </section>
+              <section className={styles.imageSection}>
+                <Image
+                  src="/images/users/diego_larrea/hero.jpg"
+                  alt="Mantenimiento industrial"
+                  width={500}
+                  height={300}
+                  layout="responsive"
+                  className={styles.backgroundImage}
                 />
-                {/* Columna con información de contacto */}
+              </section>
+            </Col>
+          </Row>
 
-                <section>
-                  <ContactIcons
-                    phone="+593992870801"
-                    phoneIcon="/icons/black/call.png"
-                    email="razor_deg@hotmail.com"
-                    emailIcon="/icons/white/email_w.jpeg"
-                    whatsapp="+593992870801"
-                    whatsappIcon="/icons/white/whatsapp_w.png"
-                    // telegram="+593992870801"
-                    // telegramIcon="/icons/black/telegram.png"
-                    // location="Mi dirección"
-                    // locationIcon="/icons/black/location.png"
-                  />
-                </section>
-              </motion.div>
-            </section>
-            <section className={styles.imageSection}>
-              <Image
-                src="/images/users/diego_larrea/hero.jpg"
-                alt="Mantenimiento industrial"
-                width={500}
-                height={300}
-                layout="responsive"
-                className={styles.backgroundImage}
+          {/* Componente de educación y certificaciones */}
+
+          <Row>
+            <Col className={styles.educationSection}>
+              <section id="education">
+                <div className={styles.educationText}>
+                  <h2 className={styles.educationTitle}>Educación y Certificaciones</h2>
+                  <span className={styles.educationInstructions}>
+                    Haz clic en el logo para ver la información
+                  </span>
+                </div>
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 1 }}
+                >
+                  <div className={styles.educationInfo}>
+                    <EducationAndCertifications
+                      items={items}
+                      itemClassName={styles.educationItem}
+                      logoClassName={styles.educationLogo}
+                      titleClassName={styles.educationItemTitle}
+                    />
+                  </div>
+                </motion.div>
+              </section>
+            </Col>
+          </Row>
+
+          {/* Componente de experiencia laboral */}
+
+          <Row>
+            <Col className={styles.imageGallery}>
+              <div className={styles.imageGalleryText}>
+                <h2 className={styles.imageGalleryTitle}>Experiencia laboral</h2>
+                <span className={styles.imageGalleryInstructions}>
+                  Haz clic en la imagen para ver la información
+                </span>
+              </div>
+
+              <ImageGallery
+                images={images}
+                imageDescriptionClassName={styles.imageDescription}
+                thumbnailClassName={styles.thumbnail}
+                modalDescriptionClassName={styles.modalDescription}
               />
-            </section>
-          </Col>
-        </Row>
+            </Col>
+          </Row>
 
-        {/* Componente de educación y certificaciones */}
+          {/* Componente de información de pago */}
 
-        <Row>
-          <Col className={styles.educationSection}>
-            <section id="education">
-              <div className={styles.educationText}>
-                <h2 className={styles.educationTitle}>Educación y Certificaciones</h2>
-                <span className={styles.educationInstructions} >Haz clic en el logo para ver la información</span>
-              </div>
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 1 }}
-              >
-                <div className={styles.educationInfo}>
-                  <EducationAndCertifications
-                    items={items}
-                    itemClassName={styles.educationItem}
-                    logoClassName={styles.educationLogo}
-                    titleClassName={styles.educationItemTitle}
-                  />
+          <Row>
+            <Col className={styles.paymentSection}>
+              <section id="payment" className={styles.paymentInfo}>
+                <div className={styles.paymentText}>
+                  <h2 className={styles.paymentTitle}>Información de Pago</h2>
+                  <span className={styles.paymentInstructions}>
+                    Haz clic en el logo para acceder a los datos de la cuenta
+                  </span>
                 </div>
-              </motion.div>
-            </section>
-          </Col>
-        </Row>
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 1 }}
+                >
+                  <div className={styles.bankInfo}>
+                    <PaymentInfo
+                      bankName="Banco Pichincha"
+                      accountNumber="123456789"
+                      identification="123456"
+                      email="contacto@bancoxyz.com"
+                      bankLogo="/images/banksLogos/bancoPichincha.png"
+                    />
+                  </div>
+                </motion.div>
+              </section>
+            </Col>
+          </Row>
 
-        {/* Componente de experiencia laboral */}
+          {/* Componente de video player */}
 
+          <Row>
+            <Col className={styles.videoPlayer}>
+              <VideoPlayer videoUrl="/video/users/diego_larrea/mantenimiento_industrial.mp4" />
+            </Col>
+          </Row>
 
-        <Row>
-          <Col className={styles.imageGallery}>
-            <div className={styles.imageGalleryText}>
-              <h2 className={styles.imageGalleryTitle}>Experiencia laboral</h2>
-              <span className={styles.imageGalleryInstructions}>Haz clic en la imagen para ver la información</span>
-            </div>
-            
-            <ImageGallery
-              images={images}
-              imageDescriptionClassName={styles.imageDescription}
-              thumbnailClassName={styles.thumbnail}
-              modalDescriptionClassName={styles.modalDescription}
-            />
-          </Col>
-        </Row>
+          {/* Componente de QR Code */}
+          <Row>
+            <Col className={styles.qrCode}>
+              <section>
+                <QRCodeComponent
+                  qrCodeImageUrl="/images/users/diego_larrea/logo.png"
+                  altText="QR Code"
+                />
+              </section>
+              <p className={styles.scanText}>Escanea tu código</p>
+            </Col>
+          </Row>
 
-        {/* Componente de información de pago */}
-
-        <Row>
-          <Col className={styles.paymentSection}>
-            <section id="payment" className={styles.paymentInfo}>
-              <div className={styles.paymentText} >
-                <h2 className={styles.paymentTitle}>Información de Pago</h2>
-                <span className={styles.paymentInstructions}>Haz clic en el logo para acceder a los datos de la cuenta</span>
-              </div>
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 1 }}
-              >
-                <div className={styles.bankInfo}>
-                  <PaymentInfo
-                    bankName="Banco Pichincha"
-                    accountNumber="123456789"
-                    identification="123456"
-                    email="contacto@bancoxyz.com"
-                    bankLogo="/images/banksLogos/bancoPichincha.png"
-                  />
-                </div>
-              </motion.div>
-            </section>
-          </Col>
-        </Row>
-
-        {/* Componente de video player */}
-
-        <Row>
-          <Col className={styles.videoPlayer}>
-            <VideoPlayer videoUrl="/video/users/diego_larrea/mantenimiento_industrial.mp4" />
-          </Col>
-        </Row>
-
-        {/* Componente de QR Code */}
-        <Row>
-          <Col className={styles.qrCode}>
-            <section>
-              <QRCodeComponent 
-                qrCodeImageUrl="/images/users/diego_larrea/logo.png" altText="QR Code" />
-            </section>
-            <p className={styles.scanText}>Escanea tu código</p>
-          </Col>
-        </Row>
-
-        {/* Componente de footer */}
-        <Row >
-          <Col className={styles.footerCol}>
-            <Footer
-              footerClassName={styles.footerClassName}
-              containerFooterClassName={styles.containerFooterClassName}
-              textFooterClassName={styles.textFooterClassName}
-              linkFooterClassName={styles.linkFooterClassName}
-            />
-          </Col>
-        </Row>
-      </Container>
-    </Layout>
+          {/* Componente de footer */}
+          <Row>
+            <Col className={styles.footerCol}>
+              <Footer
+                footerClassName={styles.footerClassName}
+                containerFooterClassName={styles.containerFooterClassName}
+                textFooterClassName={styles.textFooterClassName}
+                linkFooterClassName={styles.linkFooterClassName}
+              />
+            </Col>
+          </Row>
+        </Container>
+      </Layout>
+    </>
   );
 }
